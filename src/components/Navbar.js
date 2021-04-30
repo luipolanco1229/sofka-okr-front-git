@@ -16,7 +16,7 @@ function Navbar() {
                 name: 'Notification Proyect',
                 typeN: 'OKR',
                 detail: '30',
-                viewed: 'false'
+                viewed: 'true'
             },
             {
                 id: 'd00d3614-101a-44ca-b6c2-0be075aeed3b',
@@ -65,7 +65,6 @@ function Navbar() {
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
                 <div className="navbar">
-
                     <Link to="#" className='menu-bars'>
                         <FaIcons.FaBars onClick={showSidebar} />
                     </Link>
@@ -79,7 +78,6 @@ function Navbar() {
                         </ul>
                     </div>
                 </div>
-
 
                 <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                     <ul className='nav-menu-items' onClick={showSidebar}>
