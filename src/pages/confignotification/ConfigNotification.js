@@ -14,7 +14,8 @@ const ConfigNotification = () => {
 
 	const getConfigNotification = () =>{
 
-	if(user){
+	if(user)
+	{
 		fetch("http://localhost:8080/notifications/consultConfig/"+user.email,  {
 			method: "GET",
 			headers: {
@@ -25,11 +26,24 @@ const ConfigNotification = () => {
 			.then((response) => {
 			  setConfig(response);
 			  {console.log(response) }
-			});}
+			});
+		
+		}
 
 	};	
 	const  Swal = () => {
-		console.log(config)
+		fetch("http://localhost:8080/notifications/insertConfig/",  {
+			method: "POST",
+			body: JSON.stringify(config),
+			headers: {
+			"Content-Type": "application/json",
+			},
+		  })
+			.then((response) => response.json())
+			.then((response) => {
+			  setConfig(response);
+			  {console.log(response) }
+			});
         return (
 			swal("Correcto", "La configuración ha sido guardada", "success")
 			)
