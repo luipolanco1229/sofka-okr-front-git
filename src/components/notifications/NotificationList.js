@@ -8,8 +8,8 @@ class NotificationsListItem extends React.Component {
   render() {
 
     const message = 
-      (this.props.notif.detail==="30") ? this.props.notif.detail + "% Sigue Esforzandote":
-      (this.props.notif.detail==="70") ? this.props.notif.detail + "% Ya casi lo logras":
+      (this.props.notif.detail==="30") ? this.props.notif.detail + "% ¡Sigue esforzándote!":
+      (this.props.notif.detail==="70") ? this.props.notif.detail + "% ¡Casi lo logras!":
       "Finalizado";
 
     return (
